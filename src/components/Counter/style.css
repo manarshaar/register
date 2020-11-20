@@ -1,0 +1,43 @@
+.container{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+}
+.icon{
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgb(58, 170, 43);
+    color: white;
+}
+
+span{
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+}
+
+.plus_icon{
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgb(101, 104, 100);
+    color: white;
+    margin-left: 15px;
+    margin-right: 7px;
+}
+
+.minus_icon{
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgb(57, 166, 180);
+    color: white;
+}
+
+.counter{
+    background-color: rgba(255, 239, 22, 0.925);
+    font-weight: 700;
+    width: 45px;
+    text-align: center;
+    border-radius: 3px;
+
+}
