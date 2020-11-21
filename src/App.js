@@ -1,68 +1,68 @@
 import React from "react";
 import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import Counter from "./components/Counter";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+// import Counter from "./components/Counter";
 
 class App extends React.Component {
   state = {
-    counters: [
-      { key: "1", sum: 0 },
-      { key: "2", sum: 0 },
-      { key: "3", sum: 0 },
-      { key: "4", sum: 0 },
-    ],
+    firstOp: 0,
+    secondOp: 0,
   };
 
-  handleRefresh() {
-    this.setState((prevState) => {
-      const newCounters = prevState.counters.map((c) => {
-        return { ...c, sum: 0 };
-      });
-      return { counters: newCounters };
-    });
-  }
-
-  handleAdd(key) {
-    this.setState((prevState) => {
-      const newCounters = prevState.counters.map((c) => {
-        if (c.key === key) return { ...c, sum: c.sum + 1 };
-        else return { ...c };
-      });
-      return { counters: newCounters };
-    });
-  }
-
-  handleSub(key) {
-    this.setState((prevState) => {
-      const newCounters = prevState.counters.map((c) => {
-        if (c.key === key && c.sum !== 0) return { ...c, sum: c.sum - 1 };
-        else return { ...c };
-      });
-      return { counters: newCounters };
-    });
-  }
+  // handleSub(key) {
+  //   this.setState((prevState) => {
+  //     const newCounters = prevState.counters.map((c) => {
+  //       if (c.key === key && c.sum !== 0) return { ...c, sum: c.sum - 1 };
+  //       else return { ...c };
+  //     });
+  //     return { counters: newCounters };
+  //   });
+  // }
 
   render() {
     return (
       <div className="App">
-        <div className="wrapper">
-          <FontAwesomeIcon icon={faShoppingCart} />
-          <div className="total">
-            {this.state.counters.reduce((acc, curr) => {
-              if (curr.sum > 0) return acc + 1;
-              return acc;
-            }, 0)}
+        <div className="screen">0</div>
+        <div className="Buttons">
+          <div className="row">
+            <div id="c" className="op">
+              AC
+            </div>
+            <div id="c" className="op">
+              +/-
+            </div>
+            <div id="c" className="op">
+              %
+            </div>
+            <div className="op">\</div>
           </div>
-          <div>Items</div>
+          <div className="row">
+            <div className="num">7</div>
+            <div className="num">8</div>
+            <div className="num">9</div>
+            <div className="op">X</div>
+          </div>
+          <div className="row">
+            <div className="num">4</div>
+            <div className="num">5</div>
+            <div className="num">6</div>
+            <div className="op">-</div>
+          </div>
+          <div className="row">
+            <div className="num">1</div>
+            <div className="num">2</div>
+            <div className="num">3</div>
+            <div className="op">+</div>
+          </div>
+          <div className="row">
+            <div id="zero" className="num">
+              0
+            </div>
+            <div className="num">.</div>
+            <div className="op">=</div>
+          </div>
         </div>
-
-        <Counter
-          c={this.state.counters}
-          refresh={this.handleRefresh.bind(this)}
-          add={this.handleAdd.bind(this)}
-          sub={this.handleSub.bind(this)}
-        />
       </div>
     );
   }
