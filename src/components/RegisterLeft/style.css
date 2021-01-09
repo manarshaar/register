@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+.wrapper{
+    background-color: #1565D8 ;
+    height: 100vh;
+    width: 45vw;
+}
+
+.logo{
+    margin-left: 15%;
+    margin-top: 61px;
+}
+
+.dots{
+    margin-left: 65%;
+    margin-top: 3%;
+    padding-bottom: 40px;
+    size: 5px;
+}
+
+.quote{
+    margin-left: 15%;
+
+}
+
+.par{
+    position: absolute;
+    width: 370px;
+    height: 164px;
+    left: 82px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 38px;
+    color: #FFFFFF;
+
+    margin-left: 1%;
+    
+}
+
+.vector{
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+}
+
+.vector1{
+    margin-left: 62%;
+}
